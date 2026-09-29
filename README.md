@@ -7,7 +7,7 @@
 [![Docs](https://img.shields.io/badge/docs-3-2E86AB?style=flat-square)](#index)
 [![Language](https://img.shields.io/badge/language-中文_·_EN-C73E1D?style=flat-square)](#about)
 [![Commit](https://img.shields.io/badge/commit-双语_Bilingual-4CAF50?style=flat-square)](#rules)
-[![Push](https://img.shields.io/badge/push-仅限本人_owner_only-D32F2F?style=flat-square)](#rules)
+[![Push](https://img.shields.io/badge/push-仅限所有者_owner_only-D32F2F?style=flat-square)](#rules)
 
 *给人类看的门面，给 AI 看的规矩。*
 *A front door for humans, ground rules for AI.*
@@ -20,16 +20,42 @@
 ## 📌 关于本仓库 · About
 
 **中文**
-本仓库沉淀 AI 协作过程中产生的三类知识：约束所有仓库的**规范**、单个项目的
-**接手手册**、可跨项目复用的**技法复盘**。目标与各手册一致——任何人（或 AI）
-读完这一页，就知道该读哪份文档、按什么规矩干活。
+本仓库沉淀 AI 协作过程中产生的三类知识：约束所有仓库的**规范**、可复制填空的
+**接手手册模板**、可跨项目复用的**技法复盘**。全部内容已通用化——不含任何个人
+信息与私有项目细节，任何人（或 AI）克隆后即可直接当作自己 Agent 的参考手册。
 
 **English**
 This repository curates three kinds of knowledge produced while working with AI
-assistants: **standards** that bind every repository, per-project **operating
-manuals**, and reusable **playbooks**. The goal matches every manual here —
-anyone (human or AI) should finish this page knowing which document to read
-and under which rules to work.
+assistants: **standards** that bind every repository, a fill-in-the-blank
+**handover-manual template**, and reusable **playbooks**. Everything here is
+fully generic — no personal info, no private project details — so anyone (human
+or AI) can clone it and hand it straight to their own agent as a reference.
+
+---
+
+<a id="quickstart"></a>
+## 🚀 快速上手 · Quick Start
+
+**中文**
+1. `git clone` 本仓库到任意位置（工作区内、桌面均可）；
+2. 在你的 coding agent（Claude Code / ZCode / Cursor / Copilot…）的指令文件
+   （`AGENTS.md` / `CLAUDE.md` / 系统提示）里加一句：
+   **"开始任何仓库的工作前，先读 Privacy_Skills_and_Prompt_SQL 的 README"**；
+3. 把 [01 规范](01_规范_Standards/代码与提交规范.md) 里的 `<占位符>` 替换成
+   你自己的署名/仓库清单，规范即对你生效；
+4. 新项目要交给 AI？复制 [02 接手手册](02_手册_Manuals/项目接手手册_模板与写法.md)
+   的 §2 骨架填空，实例抄 §3、§4。
+
+**English**
+1. `git clone` this repo anywhere inside your workspace;
+2. Add one line to your coding agent's instruction file (`AGENTS.md`,
+   `CLAUDE.md`, system prompt): **"Before working on any repo, read the
+   README of Privacy_Skills_and_Prompt_SQL"**;
+3. Replace the `<placeholders>` in [01 Standards](01_规范_Standards/代码与提交规范.md)
+   with your own identity and repo inventory — the rules now bind you;
+4. Handing a new project to an AI? Copy the §2 skeleton from
+   [02 Handover Manual](02_手册_Manuals/项目接手手册_模板与写法.md),
+   then lift examples from §3 and §4.
 
 ---
 
@@ -41,16 +67,16 @@ Privacy_Skills_and_Prompt_SQL/
 ├── README.md                        ← 你在这里 · You are here
 ├── 01_规范_Standards/               约束所有仓库 · binds all repos
 │   └── 代码与提交规范.md
-├── 02_手册_Manuals/                 项目级接手手册 · per-project manuals
-│   └── yolo项目_工作流程与注意事项.md
+├── 02_手册_Manuals/                 项目接手手册模板 · handover-manual template
+│   └── 项目接手手册_模板与写法.md
 └── 03_技法_Playbooks/               跨项目复用方法 · reusable techniques
     └── GitHub搜索_问题与解决手法.md
 ```
 
 | 目录 Folder | 放什么 · What belongs here |
 |---|---|
-| `01_规范_Standards` | 跨仓库的规则、格式与红线，对所有项目生效 · Cross-repo rules, formats and red lines |
-| `02_手册_Manuals` | 单个项目的完整接手手册，AI 读完即可接手 · A complete handover manual for one project |
+| `01_规范_Standards` | 跨仓库的规则、格式与红线，替换占位符后对所有项目生效 · Cross-repo rules, formats and red lines; effective after replacing placeholders |
+| `02_手册_Manuals` | 项目接手手册的**模板与写法**（新项目复制填空） · The **template & guide** for per-project handover manuals (copy & fill for new projects) |
 | `03_技法_Playbooks` | 与具体项目无关、可反复使用的方法与踩坑复盘 · Project-agnostic, reusable techniques and post-mortems |
 
 ---
@@ -60,9 +86,9 @@ Privacy_Skills_and_Prompt_SQL/
 
 | # | 文档 Document | 分类 Category | 一句话简介 In one line | 读者 Audience |
 |:-:|---|:-:|---|:-:|
-| 1 | [代码与提交规范](01_规范_Standards/代码与提交规范.md) | 01 规范 | 8 个仓库的提交格式、Git 分工、仓库卫生红线 <br> Commit formats, Git division of labor, repo hygiene | 所有仓库的所有人与 AI <br> Owner & AI, all repos |
-| 2 | [yolo项目_工作流程与注意事项](02_手册_Manuals/yolo项目_工作流程与注意事项.md) | 02 手册 | 眼控轮椅 YOLO 项目：数据、训练、磁盘、已知坑 <br> Eye-wheelchair YOLO: data, training, disk, known pitfalls | 在 Yolo_model 工作的 AI <br> AI working on Yolo_model |
-| 3 | [GitHub搜索_问题与解决手法](03_技法_Playbooks/GitHub搜索_问题与解决手法.md) | 03 技法 | 无 python/node 环境下用 curl+perl 调研 GitHub <br> GitHub research with curl+perl where python/node fail | 在本机做调研的 AI <br> AI doing research on this machine |
+| 1 | [代码与提交规范](01_规范_Standards/代码与提交规范.md) | 01 规范 | 提交信息四种格式、Git 分工两方案、仓库卫生红线（占位符模板） <br> Four commit formats, two Git division schemes, repo hygiene red lines (placeholder template) | 所有仓库的所有人与 AI <br> Owner & AI, all repos |
+| 2 | [项目接手手册_模板与写法](02_手册_Manuals/项目接手手册_模板与写法.md) | 02 手册 | 怎么写"AI 一读即接手"的项目手册 + 12 条通用坑 + 数据查找路径 <br> How to write a manual an AI can take over from + 12 universal pitfalls + data-source paths | 要写或接手项目手册的人类与 AI <br> Humans & AI writing or inheriting a project manual |
+| 3 | [GitHub搜索_问题与解决手法](03_技法_Playbooks/GitHub搜索_问题与解决手法.md) | 03 技法 | 无 python/node 环境下用 curl+perl 调研 GitHub；API 限流与降级 <br> GitHub research with curl+perl where python/node fail; rate limits & fallbacks | 在 Windows/Git Bash 做调研的 AI <br> AI researching on Windows/Git Bash |
 
 ---
 
@@ -93,8 +119,8 @@ Privacy_Skills_and_Prompt_SQL/
 
 1. 约束**所有**仓库的规则 → `01_规范_Standards/`
    Rules binding **all** repositories → `01`
-2. 只关于**某一个项目**、让 AI 能直接接手的完整手册 → `02_手册_Manuals/`
-   A full handover manual for **one** project → `02`
+2. 给**某个项目**写的接手手册（复制 02 模板填空而成）→ `02_手册_Manuals/`
+   A handover manual for **one** project (filled from the 02 template) → `02`
 3. 与项目无关、**可复用**的方法、工具链、踩坑复盘 → `03_技法_Playbooks/`
    Project-agnostic **reusable** techniques, toolchains, post-mortems → `03`
 
@@ -115,7 +141,7 @@ Filenames keep the Chinese `topic_subtitle.md` habit; folders keep
 
 ```text
 ① 先声明 Declare → ② 执行 Execute → ③ 同步文档 Sync docs
-        → ④ git commit（双语 bilingual） → ⑤ 停，等人类 push Stop, owner pushes
+        → ④ git commit（双语 bilingual） → ⑤ 停，等所有者 push Stop, owner pushes
 ```
 
 提交前过一遍规范文档第 04 节的五项检查清单。
@@ -125,9 +151,9 @@ Run the 5-item pre-commit checklist (§04 of the Conventions) every time.
 
 <div align="center">
 
-`aaf12329` · 知识库 v1.0 · 2026-09-29
+`Privacy_Skills_and_Prompt_SQL` · 知识库 v2.0 · 2026-09-29
 
-**中文在前 · 双语同行 · push 归本人 🔴**
+**中文在前 · 双语同行 · push 归所有者 🔴**
 *Chinese first · bilingual throughout · push belongs to the owner 🔴*
 
 </div>

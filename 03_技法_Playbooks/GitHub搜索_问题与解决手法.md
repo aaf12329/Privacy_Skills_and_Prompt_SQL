@@ -1,13 +1,13 @@
 # GitHub 调研手册 —— 搜索过程问题与解决手法
 
-> **本文档写给在本环境工作的 AI 助手**(ZCode 或后续任何 AI)。
-> 来源:2026-09-29 用 GitHub API 调研"多 Agent 协作项目"全程踩坑复盘。
-> 目标:读完直接复用结论,不重新探测环境、不重复撞限流。
-> 人类所有者:Guards。更新:2026-09-29
+> **本文档可移植**:任何 Windows + Git Bash 环境下的 AI 助手都能直接复用;
+> 其他操作系统按 §1 的降级链思路自行探测等价工具链。
+> 来源:2026-09-29 用 GitHub API 调研"多 Agent 协作项目"的踩坑复盘。
+> 目标:读完直接复用结论,不重新探测环境、不重复撞限流。更新:2026-09-29
 
 ---
 
-## 0. 本机环境事实(直接采信,不要重新探测)
+## 0. 参考机环境事实(2026-09 实测;你的机器先照此探测一遍再用)
 
 | 项 | 值 |
 |---|---|
@@ -15,7 +15,7 @@
 | **可用** | `perl` 5.38(JSON::PP 内置)、`curl`(mingw64)、`powershell.exe` |
 | **不可用** | `python`(商店占位 stub,报 exit 49)、`node`(command not found)、`gh` CLI(未安装) |
 | LWP::UserAgent | 模块存在,但发 HTTPS **静默返回空**(无报错、无数据)——**别用它抓 HTTPS** |
-| 桌面真实路径 | 用 `powershell.exe -NoProfile -Command "[Environment]::GetFolderPath('Desktop')"` 确认,别猜(可能有 OneDrive 重定向);本机为 `C:\Users\Guards\Desktop` |
+| 桌面真实路径 | 用 `powershell.exe -NoProfile -Command "[Environment]::GetFolderPath('Desktop')"` 确认,别猜(可能有 OneDrive 重定向,真实路径可能是 `C:\<用户名>\Desktop` 或 OneDrive 下) |
 
 **工具降级链(实测结论)**:python ✗ → node ✗ → **perl ✓**;perl 内部再降级:
 LWP 抓 HTTPS ✗ → **curl 抓取 ✓**,perl 只做 JSON 解析。
@@ -65,7 +65,7 @@ curl -s -H "Accept: application/vnd.github+json" \
    date +%s                                                   # 与当前时间相减 = 还要等几秒
    ```
 3. **core 60 次用完后别干等**(本次等了 25 分钟,不值):
-   - `gh` CLI 自带认证可绕开(未认证限额的 60/小时是按 IP 算的)——本机未装,装了优先用;
+   - `gh` CLI 自带认证可绕开(未认证限额的 60/小时是按 IP 算的)——参考机未装,你的环境装了优先用;
    - **降级用 WebFetch 抓 `github.com/<owner>/<repo>` HTML 页**:不走 API 限流,
      README 全文、星数、commit 活跃度、CONTRIBUTING 是否存在、架构说明全都能拿到,
      做深度调研时信息比 API 更全。API 留给"批量列表 + 排序"这类只有它能干的事。
