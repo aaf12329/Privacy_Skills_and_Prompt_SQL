@@ -59,7 +59,8 @@ Privacy_Skills_and_Prompt_SQL/
 │   └── 用户画像_协作偏好.md          ⚠️ 非通用文件（带过滤标记）
 └── 03_技法_Playbooks/               跨项目复用方法
     ├── GitHub搜索_问题与解决手法.md
-    └── 学术检索_问题与获取路径.md
+    ├── 学术检索_问题与获取路径.md
+    └── 多Agent协作_项目精选.md
 ```
 
 | 目录 | 放什么 |
@@ -79,7 +80,8 @@ Privacy_Skills_and_Prompt_SQL/
 | 2 | [项目接手手册_模板与写法](02_手册_Manuals/项目接手手册_模板与写法.md) | 02 | 怎么写"AI 一读即接手"的项目手册 + 通用坑 + 数据查找路径 | 写/接手项目手册的人类与 AI |
 | 3 | [GitHub搜索_问题与解决手法](03_技法_Playbooks/GitHub搜索_问题与解决手法.md) | 03 | 无 python/node 环境下 curl+perl 调研 GitHub；限流与降级 | 在 Windows/Git Bash 调研的 AI |
 | 4 | [学术检索_问题与获取路径](03_技法_Playbooks/学术检索_问题与获取路径.md) | 03 | 学术文献检索全流程：Crossref 核实题录、限流降级、机构库挖全文、付费墙合法获取路径 | 需要找论文/拿全文的 AI 与人 |
-| 5 | [用户画像_协作偏好](02_手册_Manuals/用户画像_协作偏好.md) ⚠️ | 02 | 个人协作画像；**顶部带过滤标记，非通用文件** | 与此人协作的 AI |
+| 5 | [多Agent协作_项目精选](03_技法_Playbooks/多Agent协作_项目精选.md) | 03 | 多 Agent 方向项目地图：四档精选 + 四种协作范式 + 刷经验路径 | 想入坑多 Agent 的 AI 与人 |
+| 6 | [用户画像_协作偏好](02_手册_Manuals/用户画像_协作偏好.md) ⚠️ | 02 | 个人协作画像；**顶部带过滤标记，非通用文件** | 与此人协作的 AI |
 
 ---
 
@@ -93,6 +95,11 @@ Privacy_Skills_and_Prompt_SQL/
   *Owner-only push; AI stops at commit.*
 - 🔴 **永不入库**：密钥凭据、虚拟环境、缓存生成物、原始数据文件。
   *Never commit: secrets, venvs, caches/build output, raw data.*
+- 🔴 **删除必报备、永不清空回收站**：删项目文件夹之外的任何东西先报备；
+  删除一律送回收站，**绝不清空回收站**，项目文件夹之外禁止直接 `rm`。
+  *Deleting anything outside a project folder requires reporting first; always
+  send deletions to the Recycle Bin — never empty it, never bare `rm` outside
+  project folders.*
 - 🔴 **提交中过滤身份信息**：真实姓名、学校/单位、地理位置、健康状况等——
   提交信息与提交的文件内容都算；除非所有者明确要求写入。
   *Filter identity info (name/school/location/health) from commit messages and
@@ -136,7 +143,7 @@ Privacy_Skills_and_Prompt_SQL/
 | [01 规范](01_规范_Standards/代码与提交规范.md) | Git 分工 / 提交信息格式 / 提交前检查清单 / 仓库卫生红线 | 每次必读（§02 §04 §07） |
 | [02 模板](02_手册_Manuals/项目接手手册_模板与写法.md) | 新项目接手手册的模板与写法 | 按需（接手/新建项目时） |
 | [02 画像](02_手册_Manuals/用户画像_协作偏好.md) ⚠️ | 个人协作偏好（带过滤标记，非通用） | 按需（需了解所有者偏好时） |
-| [03 技法](03_技法_Playbooks/GitHub搜索_问题与解决手法.md) | Windows/Git Bash 下 GitHub 调研手法与限流应对 | 按需（做 GitHub 调研时） |
+| [03 技法](03_技法_Playbooks/GitHub搜索_问题与解决手法.md) | Windows/Git Bash 下 GitHub 调研手法与限流应对；另有学术检索、多 Agent 项目精选 | 按需（做 GitHub/学术调研、入坑多 Agent 时） |
 
 **② 任务路由（做什么 → 读哪里）**
 
@@ -144,7 +151,7 @@ Privacy_Skills_and_Prompt_SQL/
 |---|---|
 | 开始任何仓库的工作 | 本 README + 01 §02（Git 分工）· §07（红线） |
 | 写 commit | 01 §03（信息格式）· §04（提交前检查清单） |
-| 大动作：下载 / 删除 / 装环境 / 跨盘 | 01 §07 磁盘报备制度 |
+| 大动作：下载 / 删除 / 装环境 / 跨盘 | 01 §07 磁盘报备制度 · §10（删除必报备 + 送回收站） |
 | 判断文件能否入库 | 01 §07 仓库卫生（永不入库 / 选择性入库） |
 | 接手或交付一个项目 | 02 模板（复制 §2 骨架填空） |
 | 需要了解所有者偏好与沟通方式 | 02 画像（⚠️ 先删标记行再用） |
