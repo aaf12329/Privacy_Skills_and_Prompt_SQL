@@ -1,2 +1,13 @@
-# AI/tool filter config (generic name)
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ===== AI/工具的过滤配置只留本机，不入库（.ignore / .zcodeignore 等）=====
 .ignore
+.zcodeignore
+
+# ===== 系统杂物 =====
+Thumbs.db
+.DS_Store
