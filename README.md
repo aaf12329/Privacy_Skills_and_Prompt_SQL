@@ -57,7 +57,7 @@ Privacy_Skills_and_Prompt_SQL/
 ├── 00_用户信息_Private/             🔴 创作者私人方向（非通用）
 │   ├── README.md                    私人区声明与红线
 │   ├── 用户画像_协作偏好.md          个人协作画像（带过滤标记）
-│   └── 个人笔记 ×2                  前端整合笔记（三合一）· conda 备忘
+│   └── 个人笔记 ×3                  前端整合笔记（三合一）· conda 指令与路径备忘
 ├── 01_规范_Standards/               约束所有仓库
 │   ├── 代码与提交规范.md             提交 / 仓库 / 删除规则
 │   └── 代码架构规范.md               分层解耦 / 地址簿 / 契约 / 自测 / 安全闸门
@@ -192,7 +192,7 @@ marker line in the profile before use.*
 
 <div align="center">
 
-`Privacy_Skills_and_Prompt_SQL` · v2.5 · 2026-10-05
+`Privacy_Skills_and_Prompt_SQL` · v2.6 · 2026-10-05
 
 **中文在前 · push 归所有者 🔴**
 

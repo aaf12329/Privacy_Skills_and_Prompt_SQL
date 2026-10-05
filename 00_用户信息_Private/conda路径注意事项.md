@@ -1,59 +1,9 @@
-# Conda 通用指令和路径注意事项
+# Conda 路径设置与注意事项
 
 > 适用环境：Windows 11，Anaconda 安装于 `D:\Anaconda`（全机安装，当前账户只读）。
+> 日常操作命令见同目录《[conda常用指令.md](conda常用指令.md)》。
 
-## 一、环境管理常用指令
-
-### 创建与删除
-
-```bash
-# 创建环境（-n 后跟环境名，可指定 Python 版本）
-conda create -n 环境名 python=3.11
-
-# 按路径创建环境（不改全局配置时的临时方案）
-conda create -p D:\anaconda_envs\envs\环境名 python=3.11
-
-# 删除环境
-conda remove -n 环境名 --all
-
-# 克隆环境（迁移环境的官方做法，不要直接剪切文件夹）
-conda create -n 新名 --clone 旧名
-```
-
-### 激活与退出
-
-```bash
-conda activate 环境名          # 激活命名环境
-conda activate D:\路径\环境名   # 激活按 -p 创建的环境（需写全路径）
-conda deactivate               # 退出当前环境
-```
-
-### 查看与搜索
-
-```bash
-conda env list        # 列出所有环境（带 * 为当前环境）
-conda list            # 查看当前环境已装的包
-conda list -n 环境名   # 查看指定环境的包
-conda search 包名      # 搜索包的可用版本
-```
-
-### 安装与卸载包
-
-```bash
-conda install 包名            # 从 conda 源安装
-conda install 包名=版本号      # 指定版本
-pip install 包名              # conda 源没有的包再用 pip（在已激活的环境内）
-conda remove 包名             # 卸载包
-```
-
-### 导出与还原环境
-
-```bash
-conda env export > environment.yml         # 导出环境配置
-conda env create -f environment.yml        # 按配置文件重建环境
-```
-
-## 二、环境存放路径的设置
+## 一、环境存放路径的设置
 
 ### 核心配置项
 
@@ -89,7 +39,7 @@ conda create -n _test python=3.11 -y   # 试建一个环境
 conda remove -n _test --all -y         # 确认位置无误后删除
 ```
 
-## 三、路径注意事项
+## 二、路径注意事项
 
 ### 目录选择
 
@@ -100,7 +50,7 @@ conda remove -n _test --all -y         # 确认位置无误后删除
 ### 本机当前状况备忘
 
 - Anaconda 本体在 `D:\Anaconda`，但为只读安装，conda 把新环境默认落到了 **`C:\Users\Guards\.conda\envs`**，包缓存同理可能占 C 盘。
-- 解决办法就是按上文第二节配置 `envs_dirs` + `pkgs_dirs` 指向 D 盘的自建目录。
+- 解决办法就是按上文第一节配置 `envs_dirs` + `pkgs_dirs` 指向 D 盘的自建目录。
 - 若想迁移已有环境：用 `conda create -n 新名 --clone 旧名` 到新位置后删除旧环境；**不要直接移动文件夹**（pip 入口脚本的绝对路径和硬链接会失效）。
 
 ### 其他

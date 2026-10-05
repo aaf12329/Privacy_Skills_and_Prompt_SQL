@@ -20,7 +20,8 @@
 | 文件 | 是什么 |
 |---|---|
 | [前端整合笔记_TS_JS_路线图_CSS选择器.md](前端整合笔记_TS_JS_路线图_CSS选择器.md) | 三合一整合：TS/JS/Node 语言与运行时 · JS 生态路线图 · CSS 选择器关系（原三份独立笔记已并入，git 历史可查原文） |
-| [conda通用指令和路径注意事项.md](conda通用指令和路径注意事项.md) | conda 环境路径配置备忘：envs_dirs / pkgs_dirs 与验证步骤 |
+| [conda常用指令.md](conda常用指令.md) | 环境创建 / 激活 / 包管理 / 导出还原速查 |
+| [conda路径注意事项.md](conda路径注意事项.md) | 环境路径配置：envs_dirs / pkgs_dirs 设法、规则与本机状况备忘 |
 
 ## 红线（与主 README 一致）
 
