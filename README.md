@@ -21,11 +21,13 @@
 **接手手册模板**、可跨项目复用的**技法复盘**。内容已通用化——不含个人信息与
 私有项目细节，任何人（或 AI）克隆后即可直接当作自己 Agent 的参考手册。
 
-**唯一例外**：`02_手册_Manuals/用户画像_协作偏好.md`——个人协作偏好画像，
-顶部带【请过滤本文件】标记；分享本库、批量处理时应跳过它，正式使用前先删除标记行。
+**唯一例外**：`00_用户信息_Private/`——创作者私人方向（个人协作偏好画像），
+画像文件顶部带【请过滤本文件】标记；分享本库、批量处理时应跳过它，正式使用前
+先删除标记行。目录性质见该目录内 README 的声明。
 
-*Bilingual repo; the only non-generic file is the personal profile in `02`, marked
-【请过滤本文件】. Full English prose lives in the section headings and rules below.*
+*Bilingual repo; the only non-generic area is `00_用户信息_Private` (the owner's
+private profile, marked 【请过滤本文件】). Full English prose lives in the section
+headings and rules below.*
 
 ---
 
@@ -52,12 +54,14 @@
 ```text
 Privacy_Skills_and_Prompt_SQL/
 ├── README.md                        ← 你在这里
+├── 00_用户信息_Private/             🔴 创作者私人方向（非通用）
+│   ├── README.md                    私人区声明与红线
+│   └── 用户画像_协作偏好.md          个人协作画像（带过滤标记）
 ├── 01_规范_Standards/               约束所有仓库
 │   ├── 代码与提交规范.md             提交 / 仓库 / 删除规则
 │   └── 代码架构规范.md               分层解耦 / 地址簿 / 契约 / 自测 / 安全闸门
-├── 02_手册_Manuals/                 手册模板与个人画像
-│   ├── 项目接手手册_模板与写法.md
-│   └── 用户画像_协作偏好.md          ⚠️ 非通用文件（带过滤标记）
+├── 02_手册_Manuals/                 手册模板
+│   └── 项目接手手册_模板与写法.md
 └── 03_技法_Playbooks/               跨项目复用方法
     ├── GitHub搜索_问题与解决手法.md
     ├── 学术检索_问题与获取路径.md
@@ -66,6 +70,7 @@ Privacy_Skills_and_Prompt_SQL/
 
 | 目录 | 放什么 |
 |---|---|
+| `00_用户信息_Private` | 🔴 创作者私人方向：所有者的画像与个人信息（非通用，勿当模板抄）<br>*owner-private area* |
 | `01_规范_Standards` | 跨仓库规则、格式与红线（替换占位符后全项目生效）<br>*cross-repo rules & red lines* |
 | `02_手册_Manuals` | 接手手册**模板与写法**（新项目复制填空）<br>*handover-manual template* |
 | `03_技法_Playbooks` | 与项目无关、可反复使用的方法与踩坑复盘<br>*reusable techniques & post-mortems* |
@@ -83,7 +88,7 @@ Privacy_Skills_and_Prompt_SQL/
 | 4 | [GitHub搜索_问题与解决手法](03_技法_Playbooks/GitHub搜索_问题与解决手法.md) | 03 | 无 python/node 环境下 curl+perl 调研 GitHub；限流与降级 | 在 Windows/Git Bash 调研的 AI |
 | 5 | [学术检索_问题与获取路径](03_技法_Playbooks/学术检索_问题与获取路径.md) | 03 | 学术文献检索全流程：Crossref 核实题录、限流降级、机构库挖全文、付费墙合法获取路径 | 需要找论文/拿全文的 AI 与人 |
 | 6 | [多Agent协作_项目精选](03_技法_Playbooks/多Agent协作_项目精选.md) | 03 | 多 Agent 方向项目地图：四档精选 + 四种协作范式 + 刷经验路径 | 想入坑多 Agent 的 AI 与人 |
-| 7 | [用户画像_协作偏好](02_手册_Manuals/用户画像_协作偏好.md) ⚠️ | 02 | 个人协作画像；**顶部带过滤标记，非通用文件** | 与此人协作的 AI |
+| 7 | [用户画像_协作偏好](00_用户信息_Private/用户画像_协作偏好.md) ⚠️ | 00 | 个人协作画像；**私人方向文件，顶部带过滤标记，非通用** | 与此人协作的 AI |
 
 ---
 
@@ -122,9 +127,10 @@ Privacy_Skills_and_Prompt_SQL/
 <a id="filing"></a>
 ## ➕ 新增文档如何归类 · Filing
 
-1. 约束**所有**仓库的规则 → `01_规范_Standards/`
-2. 给**某个项目**写的接手手册（由 02 模板填空而成）→ `02_手册_Manuals/`
-3. 与项目无关、**可复用**的方法/工具链/复盘 → `03_技法_Playbooks/`
+1. 所有者的**私人信息与画像** → `00_用户信息_Private/`（私人方向，非通用）
+2. 约束**所有**仓库的规则 → `01_规范_Standards/`
+3. 给**某个项目**写的接手手册（由 02 模板填空而成）→ `02_手册_Manuals/`
+4. 与项目无关、**可复用**的方法/工具链/复盘 → `03_技法_Playbooks/`
 
 文件名沿用「主题_副题.md」；目录名保持「编号_中文_English」。
 *Filenames: `topic_subtitle.md`; folders: `NN_中文_English`.*
@@ -145,7 +151,7 @@ Privacy_Skills_and_Prompt_SQL/
 | [01 提交规范](01_规范_Standards/代码与提交规范.md) | Git 分工 / 提交信息格式 / 提交前检查清单 / 仓库卫生 / 删除红线 | 每次必读（§02 §04 §07 §10） |
 | [01 架构规范](01_规范_Standards/代码架构规范.md) | 分层解耦 / 地址簿 / 重复消除 / 契约 / 自测 / 安全闸门 | 按需（写代码、定结构时） |
 | [02 模板](02_手册_Manuals/项目接手手册_模板与写法.md) | 新项目接手手册的模板与写法 | 按需（接手/新建项目时） |
-| [02 画像](02_手册_Manuals/用户画像_协作偏好.md) ⚠️ | 个人协作偏好（带过滤标记，非通用） | 按需（需了解所有者偏好时） |
+| [00 画像](00_用户信息_Private/用户画像_协作偏好.md) ⚠️ | 个人协作偏好（私人方向，带过滤标记，非通用） | 按需（需了解所有者偏好时） |
 | [03 技法](03_技法_Playbooks/GitHub搜索_问题与解决手法.md) | Windows/Git Bash 下 GitHub 调研手法与限流应对；另有学术检索、多 Agent 项目精选 | 按需（做 GitHub/学术调研、入坑多 Agent 时） |
 
 **② 任务路由（做什么 → 读哪里）**
@@ -159,7 +165,7 @@ Privacy_Skills_and_Prompt_SQL/
 | 写新代码 / 定结构 / 发现重复 | 01 架构规范（分层、地址簿、重复消除规程） |
 | LLM / Agent 类的接口与消息契约 | 01 架构规范 §10 |
 | 接手或交付一个项目 | 02 模板（复制 §2 骨架填空） |
-| 需要了解所有者偏好与沟通方式 | 02 画像（⚠️ 先删标记行再用） |
+| 需要了解所有者偏好与沟通方式 | 00 画像（⚠️ 先删标记行再用） |
 | 在 Windows/Git Bash 做 GitHub 调研 | 03 技法 |
 | 任何规则拿不准 | 回到 01 规范全文 |
 
@@ -172,10 +178,10 @@ Privacy_Skills_and_Prompt_SQL/
 
 提交前过一遍规范的**五项检查清单**（§04）。*Run the §04 checklist every commit.*
 
-**⚠️ 过滤标记**：本库唯一非通用文件是 `02_手册_Manuals/用户画像_协作偏好.md`——
-分享本库、批量处理、生成公开内容时**跳过该文件**；确需用它了解所有者偏好时，
-**先删除标记行再使用**。*Skip the marked profile when sharing; delete its marker
-line before use.*
+**⚠️ 过滤标记**：本库唯一非通用区是 `00_用户信息_Private/`（创作者私人方向）——
+分享本库、批量处理、生成公开内容时**跳过该目录**；确需用其中的画像了解所有者
+偏好时，**先删除标记行再使用**。*Skip the private area when sharing; delete the
+marker line in the profile before use.*
 
 **提交红线补充**：提交信息与提交的文件内容中**过滤所有者身份信息**
 （真实姓名、学校/单位、地理位置、健康状况），除非所有者明确要求写入。
@@ -185,7 +191,7 @@ line before use.*
 
 <div align="center">
 
-`Privacy_Skills_and_Prompt_SQL` · v2.2 · 2026-09-29
+`Privacy_Skills_and_Prompt_SQL` · v2.3 · 2026-10-05
 
 **中文在前 · push 归所有者 🔴**
 
