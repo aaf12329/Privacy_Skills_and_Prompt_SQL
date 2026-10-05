@@ -21,7 +21,7 @@
 **接手手册模板**、可跨项目复用的**技法复盘**。内容已通用化——不含个人信息与
 私有项目细节，任何人（或 AI）克隆后即可直接当作自己 Agent 的参考手册。
 
-**唯一例外**：`00_用户信息_Private/`——创作者私人方向（个人协作偏好画像），
+**唯一例外**：`00_用户信息_Private/`——创作者私人方向（个人画像与学习笔记），
 画像文件顶部带【请过滤本文件】标记；分享本库、批量处理时应跳过它，正式使用前
 先删除标记行。目录性质见该目录内 README 的声明。
 
@@ -56,7 +56,8 @@ Privacy_Skills_and_Prompt_SQL/
 ├── README.md                        ← 你在这里
 ├── 00_用户信息_Private/             🔴 创作者私人方向（非通用）
 │   ├── README.md                    私人区声明与红线
-│   └── 用户画像_协作偏好.md          个人协作画像（带过滤标记）
+│   ├── 用户画像_协作偏好.md          个人协作画像（带过滤标记）
+│   └── 个人笔记 ×4                  TS/JS 关系 · JS 路线图 · CSS 选择器 · conda 备忘
 ├── 01_规范_Standards/               约束所有仓库
 │   ├── 代码与提交规范.md             提交 / 仓库 / 删除规则
 │   └── 代码架构规范.md               分层解耦 / 地址簿 / 契约 / 自测 / 安全闸门
@@ -70,7 +71,7 @@ Privacy_Skills_and_Prompt_SQL/
 
 | 目录 | 放什么 |
 |---|---|
-| `00_用户信息_Private` | 🔴 创作者私人方向：所有者的画像与个人信息（非通用，勿当模板抄）<br>*owner-private area* |
+| `00_用户信息_Private` | 🔴 创作者私人方向：所有者的画像、个人信息与个人学习笔记（非通用，勿当模板抄）<br>*owner-private area* |
 | `01_规范_Standards` | 跨仓库规则、格式与红线（替换占位符后全项目生效）<br>*cross-repo rules & red lines* |
 | `02_手册_Manuals` | 接手手册**模板与写法**（新项目复制填空）<br>*handover-manual template* |
 | `03_技法_Playbooks` | 与项目无关、可反复使用的方法与踩坑复盘<br>*reusable techniques & post-mortems* |
@@ -191,7 +192,7 @@ marker line in the profile before use.*
 
 <div align="center">
 
-`Privacy_Skills_and_Prompt_SQL` · v2.3 · 2026-10-05
+`Privacy_Skills_and_Prompt_SQL` · v2.4 · 2026-10-05
 
 **中文在前 · push 归所有者 🔴**
 
