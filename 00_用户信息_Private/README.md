@@ -19,9 +19,7 @@
 
 | 文件 | 是什么 |
 |---|---|
-| [TypeScript与JavaScript.md](TypeScript与JavaScript.md) | 语言 / 运行时 / 工程三者关系：类型擦除实测、编译期 vs 运行时 |
-| [JavaScript技术路线图.md](JavaScript技术路线图.md) | JS 生态应用方向全景：两宿主分支 + 横跨节点 + 点树顺序 |
-| [CSS选择器关系.md](CSS选择器关系.md) | 组合器 = DOM 树的亲戚读法：后代 / 子代 / 兄弟 / `:has()` 一图流 |
+| [前端整合笔记_TS_JS_路线图_CSS选择器.md](前端整合笔记_TS_JS_路线图_CSS选择器.md) | 三合一整合：TS/JS/Node 语言与运行时 · JS 生态路线图 · CSS 选择器关系（原三份独立笔记已并入，git 历史可查原文） |
 | [conda通用指令和路径注意事项.md](conda通用指令和路径注意事项.md) | conda 环境路径配置备忘：envs_dirs / pkgs_dirs 与验证步骤 |
 
 ## 红线（与主 README 一致）
