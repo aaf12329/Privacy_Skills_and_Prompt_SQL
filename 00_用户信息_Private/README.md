@@ -7,6 +7,8 @@
 > and personal study notes. NOT part of the generic knowledge base — don't copy
 > it as a template.
 
+> 🤖 **AI 参考范围**：本目录内 **AI 只需参考 [用户画像_协作偏好.md](用户画像_协作偏好.md) 一份**；其余均为所有者私人笔记——AI 无需读取、不作为协作依据、不主动索引。
+
 ## 目录清单
 
 ### 画像（个人信息）
@@ -20,8 +22,8 @@
 | 文件 | 是什么 |
 |---|---|
 | [前端整合笔记_TS_JS_路线图_CSS选择器.md](前端整合笔记_TS_JS_路线图_CSS选择器.md) | 三合一整合：TS/JS/Node 语言与运行时 · JS 生态路线图 · CSS 选择器关系（原三份独立笔记已并入，git 历史可查原文） |
-| [conda常用指令.md](conda常用指令.md) | 环境创建 / 激活 / 包管理 / 导出还原速查 |
-| [conda路径注意事项.md](conda路径注意事项.md) | 环境路径配置：envs_dirs / pkgs_dirs 设法、规则与本机状况备忘 |
+
+> 📦 conda 两份备忘（常用指令 / 路径注意事项）已于 2026-10-06 迁入 [../01_规范_Standards/](../01_规范_Standards/)——环境操作属规范类知识，不再放私人区。
 
 ## 红线（与主 README 一致）
 
