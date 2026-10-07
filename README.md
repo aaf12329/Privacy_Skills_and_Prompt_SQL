@@ -63,54 +63,6 @@ Privacy_Skills_and_Prompt_SQL/
 
 ---
 
-## 🧘 写代码总纲 · The Zen of Python
-
-> 《代码规范》所有条款的"为什么"（原 §13 从规范正文移至此处——规范管"怎么做"，这里管"为什么"）。
-> 写代码拿不准时：先读禅，再读对照表；§01–§12 均见《代码规范》。
-
-> Tim Peters 的这段禅是《代码规范》所有条款的"为什么"。逐条对照：每一条禅语
-> 都能在本规范里找到落地条款——写代码拿不准时，先读禅，再读对照表。
-
-```text
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-```
-
-| 禅语 | 落到本规范 |
-|---|---|
-| Flat is better than nested | §12 禁止巨型主函数——拆函数、拆模块、分区横幅 |
-| Readability counts | §09 注释与命名 + §12 文件头结构注释 |
-| Explicit is better than implicit | §02 路径显式登记 + §05 返回契约（字段名即契约） |
-| Errors should never pass silently | §06 错误处理哲学（除非显式吞掉并留痕） |
-| There should be one -- and preferably only one -- obvious way to do it | §04 I/O 单一入口 + §02 路径地址簿（一个口子一种做法） |
-| Simple is better than complex / Complex is better than complicated | §01 分层解耦——复杂问题拆成一层层简单的东西 |
-| If the implementation is hard to explain, it's a bad idea | §12 的 30 秒法则：说不清"吃什么吐什么"的函数该拆 |
-| Although practicality beats purity | §11 已固化教训——先锁住行为再议重构，别为了纯范顺手"修" |
-| Now is better than never / never is often better than *right* now | 先声明再动手（工作流程 §05）；拍板之前不动代码 |
-
----
-
----
-
 ## 📖 AI 首读顺序（建议）
 
 1. [用户画像_协作偏好.md](01_AI项目协作参考/用户个人信息参考/用户画像_协作偏好.md)（阅读时跳过顶部标记行即可，**无需删除**）
