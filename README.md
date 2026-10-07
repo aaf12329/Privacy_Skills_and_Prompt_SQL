@@ -14,13 +14,13 @@
 
 | 你要做什么 / 找什么 | 去哪里 | 备注 |
 |---|---|---|
-| **了解所有者是谁、怎么配合**（AI 必读第一份） | [01_AI项目协作参考/画像/用户画像_协作偏好.md](01_AI项目协作参考/画像/用户画像_协作偏好.md) | ⚠️ 顶部带【请过滤本文件】标记：分享本库、批量喂给 AI、生成公开内容时**跳过整个文件**；AI 阅读时**跳过标记行即可、不必删除**（是否删除由所有者按需决定） |
-| **写代码、提交 commit**（每次动仓库前必读） | [01_AI项目协作参考/规范/代码规范.md](01_AI项目协作参考/规范/代码规范.md) | 两部分：提交规范（原编号 01–10）+ 架构规范（01–13）；含身份过滤红线与安全闸门 |
-| **配 Python / conda 环境** | [00_个人笔记/conda常用指令.md](00_个人笔记/conda常用指令.md) + [01_AI项目协作参考/规范/conda路径注意事项.md](01_AI项目协作参考/规范/conda路径注意事项.md) | 主力机环境全景另见**桌面**《个人环境配置总表.md》（不在本库） |
-| **接手 / 新建一个项目** | [01_AI项目协作参考/手册/项目接手手册_模板与写法.md](01_AI项目协作参考/手册/项目接手手册_模板与写法.md) | 模板填空式：骨架抄 §2，实例抄 §3、§4 |
-| **调研 GitHub（Windows / Git Bash）** | [01_AI项目协作参考/技法/GitHub搜索_问题与解决手法.md](01_AI项目协作参考/技法/GitHub搜索_问题与解决手法.md) | curl+perl 手法、限流与降级 |
-| **找学术论文 / 拿全文** | [01_AI项目协作参考/技法/学术检索_问题与获取路径.md](01_AI项目协作参考/技法/学术检索_问题与获取路径.md) | Crossref 核实、机构库、付费墙合法获取 |
-| **入坑多 Agent 协作** | [01_AI项目协作参考/技法/多Agent协作_项目精选.md](01_AI项目协作参考/技法/多Agent协作_项目精选.md) | 四档精选 + 协作范式 |
+| **了解所有者是谁、怎么配合**（AI 必读第一份） | [01_AI项目协作参考/用户个人信息参考/用户画像_协作偏好.md](01_AI项目协作参考/用户个人信息参考/用户画像_协作偏好.md) | ⚠️ 顶部带【请过滤本文件】标记：分享本库、批量喂给 AI、生成公开内容时**跳过整个文件**；AI 阅读时**跳过标记行即可、不必删除**（是否删除由所有者按需决定） |
+| **写代码、提交 commit**（每次动仓库前必读） | [01_AI项目协作参考/代码及路径的规范/代码规范.md](01_AI项目协作参考/代码及路径的规范/代码规范.md) | 两部分：提交规范（原编号 01–10）+ 架构规范（01–13）；含身份过滤红线与安全闸门 |
+| **配 Python / conda 环境** | [00_个人笔记/conda常用指令.md](00_个人笔记/conda常用指令.md) + [01_AI项目协作参考/代码及路径的规范/conda路径注意事项.md](01_AI项目协作参考/代码及路径的规范/conda路径注意事项.md) | 主力机环境全景另见**桌面**《个人环境配置总表.md》（不在本库） |
+| **接手 / 新建一个项目** | [01_AI项目协作参考/多Agent合作项目及项目接手手册/项目接手手册_模板与写法.md](01_AI项目协作参考/多Agent合作项目及项目接手手册/项目接手手册_模板与写法.md) | 模板填空式：骨架抄 §2，实例抄 §3、§4 |
+| **调研 GitHub（Windows / Git Bash）** | [01_AI项目协作参考/信息搜索路径参考/GitHub搜索_问题与解决手法.md](01_AI项目协作参考/信息搜索路径参考/GitHub搜索_问题与解决手法.md) | curl+perl 手法、限流与降级 |
+| **找学术论文 / 拿全文** | [01_AI项目协作参考/信息搜索路径参考/学术检索_问题与获取路径.md](01_AI项目协作参考/信息搜索路径参考/学术检索_问题与获取路径.md) | Crossref 核实、机构库、付费墙合法获取 |
+| **入坑多 Agent 协作** | [01_AI项目协作参考/信息搜索路径参考/多Agent协作_项目精选.md](01_AI项目协作参考/信息搜索路径参考/多Agent协作_项目精选.md) | 四档精选 + 协作范式 |
 | （所有者自用）TS/JS/CSS 整理 | [00_个人笔记/前端整合笔记_TS_JS_路线图_CSS选择器.md](00_个人笔记/前端整合笔记_TS_JS_路线图_CSS选择器.md) | 私人学习笔记，AI 无需主动读 |
 
 > 所有者的**思考类笔记**（《奇思妙想》《一种神奇的感觉》）与《个人环境配置总表》都在**桌面**，不在本库。
@@ -41,17 +41,11 @@ Privacy_Skills_and_Prompt_SQL/
 │   ├── 前端整合笔记_TS_JS_路线图_CSS选择器.md
 │   └── conda常用指令.md
 └── 01_AI项目协作参考/             🤖 AI 按导引区取用（四类）
-    ├── 画像/
-    │   └── 用户画像_协作偏好.md   ⚠️ 带过滤标记
-    ├── 规范/
-    │   ├── 代码规范.md           提交规范 + 架构规范（合并版，两部分各留原编号）
-    │   └── conda路径注意事项.md   envs_dirs / pkgs_dirs 规则与本机状况
-    ├── 手册/
-    │   └── 项目接手手册_模板与写法.md
-    └── 技法/
-        ├── GitHub搜索_问题与解决手法.md
-        ├── 学术检索_问题与获取路径.md
-        └── 多Agent协作_项目精选.md
+    ├── 代码及路径的规范/           代码规范.md（提交+架构）· conda路径注意事项
+    ├── 信息搜索路径参考/           GitHub搜索 · 学术检索
+    ├── 多Agent合作项目及项目接手手册/  项目接手手册_模板与写法
+    └── 用户个人信息参考/
+        └── 用户画像_协作偏好.md   ⚠️ 带过滤标记
 ```
 
 ---
@@ -69,10 +63,58 @@ Privacy_Skills_and_Prompt_SQL/
 
 ---
 
+## 🧘 写代码总纲 · The Zen of Python
+
+> 《代码规范》所有条款的"为什么"（原 §13 从规范正文移至此处——规范管"怎么做"，这里管"为什么"）。
+> 写代码拿不准时：先读禅，再读对照表；§01–§12 均见《代码规范》。
+
+> Tim Peters 的这段禅是《代码规范》所有条款的"为什么"。逐条对照：每一条禅语
+> 都能在本规范里找到落地条款——写代码拿不准时，先读禅，再读对照表。
+
+```text
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
+
+| 禅语 | 落到本规范 |
+|---|---|
+| Flat is better than nested | §12 禁止巨型主函数——拆函数、拆模块、分区横幅 |
+| Readability counts | §09 注释与命名 + §12 文件头结构注释 |
+| Explicit is better than implicit | §02 路径显式登记 + §05 返回契约（字段名即契约） |
+| Errors should never pass silently | §06 错误处理哲学（除非显式吞掉并留痕） |
+| There should be one -- and preferably only one -- obvious way to do it | §04 I/O 单一入口 + §02 路径地址簿（一个口子一种做法） |
+| Simple is better than complex / Complex is better than complicated | §01 分层解耦——复杂问题拆成一层层简单的东西 |
+| If the implementation is hard to explain, it's a bad idea | §12 的 30 秒法则：说不清"吃什么吐什么"的函数该拆 |
+| Although practicality beats purity | §11 已固化教训——先锁住行为再议重构，别为了纯范顺手"修" |
+| Now is better than never / never is often better than *right* now | 先声明再动手（工作流程 §05）；拍板之前不动代码 |
+
+---
+
+---
+
 ## 📖 AI 首读顺序（建议）
 
-1. [用户画像_协作偏好.md](01_AI项目协作参考/画像/用户画像_协作偏好.md)（阅读时跳过顶部标记行即可，**无需删除**）
-2. [代码规范.md](01_AI项目协作参考/规范/代码规范.md) 的第一部分（提交规范 01–10）
+1. [用户画像_协作偏好.md](01_AI项目协作参考/用户个人信息参考/用户画像_协作偏好.md)（阅读时跳过顶部标记行即可，**无需删除**）
+2. [代码规范.md](01_AI项目协作参考/代码及路径的规范/代码规范.md) 的第一部分（提交规范 01–10）
 3. 其余按导引区按需取用
 
 ---
